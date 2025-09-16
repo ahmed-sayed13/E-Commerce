@@ -9,5 +9,6 @@ namespace E_Commerce.Core.Interfaces
 {
     public interface IOrderRepositray: IGenericRepositray<Order>
     {
+
     }
 }

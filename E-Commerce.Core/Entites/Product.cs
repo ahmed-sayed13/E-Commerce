@@ -9,7 +9,7 @@ namespace E_Commerce.Core.Entites
     public class Product: BaseEntity<int>
     {
       
-        public string Name { get; set; } = string.Empty;
+        public string ProductName { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
        
         public decimal Price { get; set; }
