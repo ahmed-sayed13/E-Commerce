@@ -22,10 +22,11 @@ namespace E_Commerce.Infrastructure.Data.Config
             builder.Property(i => i.Quantity)
                 .IsRequired();
 
-            // العلاقة مع Product
-            builder.HasOne<Product>()
-                .WithMany()
-                .HasForeignKey(i => i.ProductId);
+            
+             
+            // العلاقة مع Order
+            
+
 
         }
     }

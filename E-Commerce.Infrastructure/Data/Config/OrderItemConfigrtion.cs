@@ -26,14 +26,14 @@ namespace E_Commerce.Infrastructure.Data.Config
                 .HasDefaultValue("Pending");
 
             // العلاقة مع الـ User
-            builder.HasOne<User>()
-                .WithMany()
-                .HasForeignKey(o => o.UserId);
-
+            
             // العلاقة مع OrderItems
             builder.HasMany(o => o.Items)
                 .WithOne()
-                .HasForeignKey(i => i.OrderId);
+                .HasForeignKey(i => i.OrderId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+
         }
     }
 

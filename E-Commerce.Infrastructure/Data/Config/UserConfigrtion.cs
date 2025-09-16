@@ -28,6 +28,11 @@ namespace E_Commerce.Infrastructure.Data.Config
 
             builder.Property(u => u.Role)
                 .HasDefaultValue("User");
+
+            builder.HasMany(u => u.Orders)
+                .WithOne(o => o.User).
+                HasForeignKey(o=>o.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

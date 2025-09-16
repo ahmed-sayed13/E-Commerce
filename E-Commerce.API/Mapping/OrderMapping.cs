@@ -10,6 +10,7 @@ namespace E_Commerce.API.Mapping
         public OrderMapping()
         {
             CreateMap<Order, OrderDto>().ReverseMap();
+            CreateMap<AddOrderDto, Order>().ReverseMap();
             CreateMap<OrderItem, OrderItemDto>().ReverseMap();
             CreateMap<UpdateOrderDto, Order>().ReverseMap();
 
